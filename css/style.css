@@ -1,2 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+:root {
+  --clr-white: hsl(255, 100%, 100%);
+  --clr-orange: hsl(28, 87%, 62%);
+  --clr-gray1: hsl(0, 0%, 20%);
+  --clr-gray2: hsl(0, 0%, 31%);
+  --clr-gray3: hsl(0, 0%, 51%);
+}
+
+*::-moz-selection {
+  background-color: var(--clr-orange);
+  color: var(--clr-white);
+}
+
+*::selection {
+  background-color: var(--clr-orange);
+  color: var(--clr-white);
+}
 /*# sourceMappingURL=style.css.map */

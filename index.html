@@ -2,12 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Checkout page challenge" />
+    <meta
+      name="description"
+      content="in this challenge we make a Checkout page using html, css for the layout and javascript to control the form"
+    />
 
     <link
       rel="shortcut icon"
       href="/images/devchallenges.png"
       type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
     />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -15,210 +27,148 @@
     />
     <link rel="stylesheet" href="css/style.css" />
 
-    <title>Checkout-page • Challenge</title>
+    <title>Checkout - page</title>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1 class="title">Checkout</h1>
-      </div>
-    </header>
-
     <main id="main">
       <div class="container">
-        <section class="contact">
-          <form action="#" class="contact-form">
-            <div class="contact-informations">
-              <h3 class="title">Contact infomation</h3>
+        <h1 class="title">Checkout</h1>
+
+        <div class="content">
+          <form action="#" class="form">
+            <!-- Form part -->
+            <div class="form-part">
+              <h2 class="form-part__title">Contact infomation</h2>
+
+              <!-- Entries  -->
               <div class="entries">
                 <div class="entry">
                   <label for="email">E-mail</label>
-                  <div class="entry-field">
+                  <div class="field">
+                    <span class="material-icons"> email </span>
                     <input
                       type="email"
                       name="email"
                       id="email"
                       placeholder="Enter your email..."
                     />
-                    <span class="material-icons"> email </span>
                   </div>
                 </div>
 
                 <div class="entry">
-                  <label for="email">Phone</label>
-                  <div class="entry-field">
+                  <label for="phone">Phone</label>
+                  <div class="field">
+                    <span class="material-icons"> phone </span>
                     <input
-                      type="number"
+                      type="text"
                       name="phone"
                       id="phone"
                       placeholder="Enter your phone..."
                     />
-                    <span class="material-icons"> phone </span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="contact-address">
-              <h3 class="title">Shipping address</h3>
+            <!-- Form part -->
+            <div class="form-part">
+              <h2 class="form-part__title">Shipping address</h2>
+
+              <!-- Entries -->
               <div class="entries">
                 <div class="entry">
-                  <label for="full-name">Full name</label>
-                  <div class="entry-field">
+                  <label for="name">Full name</label>
+                  <div class="field">
+                    <span class="material-icons"> account_circle </span>
                     <input
                       type="text"
-                      name="fullName"
-                      id="full-name"
-                      placeholder="your Full name..."
+                      name="name"
+                      id="name"
+                      placeholder="Your Full name.."
                     />
-                    <span class="material-icons"> account_circle </span>
                   </div>
                 </div>
 
                 <div class="entry">
                   <label for="address">Address</label>
-                  <div class="entry-field">
+                  <div class="field">
+                    <span class="material-icons"> home </span>
                     <input
                       type="text"
                       name="address"
                       id="address"
-                      placeholder="your Address..."
+                      placeholder="Your address.."
                     />
-                    <span class="material-icons"> home </span>
                   </div>
                 </div>
 
                 <div class="entry">
                   <label for="city">City</label>
-                  <div class="entry-field">
+                  <div class="field">
+                    <span class="material-icons"> location_city </span>
                     <input
                       type="text"
                       name="city"
                       id="city"
-                      placeholder="your  city..."
+                      placeholder="Your city.."
                     />
-                    <span class="material-icons"> location_city </span>
                   </div>
                 </div>
 
                 <div class="entry-group">
                   <div class="entry">
                     <label for="country">Country</label>
-                    <div class="entry-field">
-                      <input type="text" placeholder="Your country" />
+                    <div class="field">
                       <span class="material-icons"> public </span>
-                      <button type="button">
-                        <span class="material-icons">
-                          keyboard_arrow_down
-                        </span>
-                      </button>
+                      <input type="text" name="country" id="country" />
                     </div>
                   </div>
 
                   <div class="entry">
                     <label for="postal-code">Postal code</label>
-                    <div class="entry-label">
+                    <div class="field">
+                      <span class="material-icons"> markunread_mailbox </span>
                       <input
                         type="text"
                         name="postal-code"
                         id="postal-code"
-                        placeholder="Enter your postal code..."
+                        placeholder="Your postal code.."
                       />
-                      <span class="material-icons"> markunread_mailbox </span>
                     </div>
                   </div>
                 </div>
 
-                <div class="entry">
-                  <input type="checkbox" name="save-info" />
-                  <span>Save this information for next time</span>
+                <div>
+                  <div class="checkbox"></div>
+                  <p>Save this information for next time</p>
                 </div>
 
-                <button type="submit">continue</button>
+                <button class="submit-btn">Continue</button>
               </div>
             </div>
           </form>
-        </section>
 
-        <section class="shipping">
-          <div class="shipping-wrapper">
-            <div class="shipping-product">
-              <div class="product-img">
-                <img src="/images/photo1.png" alt="bag-image" />
-              </div>
-              <div class="product-infos">
-                <div class="product-info">
-                  <div class="product-name">Vintage Backbag</div>
-                  <div class="product-prices">
-                    <div class="new-price">$54.99</div>
-                    <div class="old-price">$94.99</div>
-                  </div>
+          <div class="checkout">
+            <div class="products">
+              <div class="product">
+                <div class="product__img">
+                  <img src="images/photo1.png" alt="vintage backbag" />
                 </div>
-
-                <div class="choose-product">
-                  <div class="entry">
-                    <button type="button">
-                      <span class="material-icons"> remove </span>
-                    </button>
-                    <input type="text" name="" />
-                    <button type="button">
-                      <span class="material-icons"> add </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="shipping-product">
-              <div class="product-img">
-                <img src="/images/photo2.png" alt="levishoes-image" />
-              </div>
-              <div class="product-infos">
-                <div class="product-info">
-                  <div class="product-name">Levi Shoes</div>
-                  <div class="product-prices">
-                    <div class="new-price">$74.99</div>
-                    <div class="old-price">$124.99</div>
-                  </div>
-                </div>
-
-                <div class="choose-product">
-                  <div class="entry">
-                    <button type="button">
-                      <span class="material-icons"> remove </span>
-                    </button>
-                    <input type="text" name="" />
-                    <button type="button">
-                      <span class="material-icons"> add </span>
-                    </button>
-                  </div>
+                <div class="product__infos">
+                  <h4 class="product__title">Vintage Backbag</h4>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="shipping-prices">
-            <div class="shipping-price">
-              <span class="label">Shipping</span>
-              <span class="price">$19</span>
-            </div>
-
-            <div class="total-price">
-              <span class="label">Total</span>
-              <span class="price">$148.98</span>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </main>
 
-    <footer>
-      <div class="container">
-        <p class="attribution">
-          created by
-          <a href="https://github.com/Dev-Martinien">King Martinien</a> -
-          <a href="https://devchallenges.io">devChallenges.io</a>
-        </p>
+    <footer id="footer">
+      <div class="attribution">
+        created by
+        <a href="https://github.com/Dev-Martinien">King Martinien</a> -
+        <a href="https://devchallenges.io/">devChallenges.io</a>
       </div>
     </footer>
   </body>
